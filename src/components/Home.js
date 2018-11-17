@@ -2,14 +2,15 @@ import React from 'react'
 import injectSheet from 'react-jss'
 import classNames from 'classnames'
 import { Link } from 'gatsby'
-import img from '../assets/img/home_hero.jpg'
-import acesLogo from '../assets/img/acesLogoB-300x188.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCoins,
   faMicroscope,
   faFighterJet,
 } from '@fortawesome/free-solid-svg-icons'
+import img from '../assets/img/home_hero.jpg'
+import acesLogo from '../assets/img/acesLogoB-300x188.png'
+import Button from '../components/Button'
 
 const styles = theme => ({
   root: {
@@ -105,10 +106,10 @@ const Home = ({ classes }) => (
                 excellence.
               </p>
               <div className={classes.buttonContainer}>
-                <Link to="/gov/constitution/">READ OUR CONSTITUTION</Link>
-                <Link to="#">
-                  <button>APPLY</button>
-                </Link>
+                <Button href="/gov/constitution/">Read Our Constitution</Button>
+                <Button href="#" variant="primary">
+                  Apply
+                </Button>
               </div>
             </div>
           </div>

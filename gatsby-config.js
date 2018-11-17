@@ -42,5 +42,7 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     `gatsby-plugin-jss`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

@@ -14,17 +14,18 @@ export default () => ({
     },
     gray: {
       color: '#bcbcbc',
+      contrast: '#000',
     },
     capitalist: {
-      color: '#e7a53c',
+      color: '#DCBC00',
       contrast: '#0a1322',
     },
     explorer: {
-      color: '#010c44',
+      color: '#0C6471',
       contrast: '##fff',
     },
     solider: {
-      color: '#4d181c',
+      color: '#CB2E27',
       contrast: '#fff',
     },
   },
