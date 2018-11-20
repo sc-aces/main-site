@@ -1,30 +1,7 @@
 module.exports = {
-  pathPrefix: `/project`,
+  pathPrefix: `/aces-2`,
   siteMetadata: {
     title: 'Association of Capitalists, Explorers, and Soldiers',
-    theme: {
-      palette: {
-        primary: {
-          color: '#2C3E50',
-          contrast: '#fff',
-        },
-        secondary: {
-          color: '#e7a53c',
-          contrast: '#0a1322',
-        },
-        midnight: {
-          color: '#0a1322',
-          contrast: '#fff',
-        },
-        gray: {
-          color: '#bcbcbc',
-        },
-      },
-      fonts: {
-        display: '"Orbitron", Times, sans-serif',
-        body: '"Roboto", Times, sans-serif',
-      },
-    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -45,4 +22,4 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
-}
+};

@@ -1,36 +1,39 @@
-export default () => ({
-  palette: {
-    primary: {
-      color: '#2C3E50',
-      contrast: '#fff',
+import { getContrastText } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const headerFont = '"Orbitron","Helvetica","Arial", sans-serif';
+
+export default () => {
+  return createMuiTheme({
+    palette: {
+      type: 'light',
+      primary: { main: '#2C3E50' },
+      secondary: { main: '#e7a53c' },
+      midnight: {
+        main: '#0a1322',
+        // contrast: getContrastText(palette.midnight.main),
+      },
+      capitalist: {
+        main: '#DCBC00',
+        // contrast: getContrastText(palette.capitalist.main),
+      },
+      explorer: {
+        main: '#0C6471',
+        // contrast: getContrastText(palette.explorer.main),
+      },
+      solider: {
+        main: '#CB2E27',
+        // contrast: getContrastText(palette.solider.main),
+      },
     },
-    secondary: {
-      color: '#e7a53c',
-      contrast: '#0a1322',
+    typography: {
+      useNextVariants: true,
+      h1: { fontFamily: headerFont },
+      h2: { fontFamily: headerFont },
+      h3: { fontFamily: headerFont },
+      h4: { fontFamily: headerFont },
+      h5: { fontFamily: headerFont },
+      h6: { fontFamily: headerFont },
     },
-    midnight: {
-      color: '#0a1322',
-      contrast: '#fff',
-    },
-    gray: {
-      color: '#bcbcbc',
-      contrast: '#000',
-    },
-    capitalist: {
-      color: '#DCBC00',
-      contrast: '#0a1322',
-    },
-    explorer: {
-      color: '#0C6471',
-      contrast: '##fff',
-    },
-    solider: {
-      color: '#CB2E27',
-      contrast: '#fff',
-    },
-  },
-  fonts: {
-    display: '"Orbitron", Times, sans-serif',
-    body: '"Roboto", Times, sans-serif',
-  },
-})
+  });
+};
