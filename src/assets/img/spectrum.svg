@@ -1,0 +1,32 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="196 165 96 101" enable-background="new 0 0 500 500" xml:space="preserve">
+
+	<g id="app-loader-poly-bg">
+		<polygon id="app-loader-poly-bg-top" fill="#171F2C" points="236.209,183.622 224.968,207.133 244.177,223.641 263.079,207.438 243.978,167.412"></polygon>
+		<polygon id="app-loader-poly-bg-left" fill="#171F2C" points="198.256,262.806 243.75,224.252 224.441,207.904"></polygon>
+		<polygon id="app-loader-poly-bg-right" fill="#171F2C" points="289.695,262.795 263.607,208.208 244.563,224.276"></polygon>
+	</g>
+	<g id="app-loader-poly-fg">
+		<polygon id="app-loader-poly-fg-top" filter="url(#app-loader-filter-top)" fill="url(#app-loader-gradient-top)" points="236.209,183.622 224.968,207.133 244.177,223.641 263.079,207.438 243.978,167.412" opacity="1" transform="translate(244.177001953125, 223.64100646972656) scale(1.03) translate(-244.177001953125, -223.64100646972656)"></polygon>
+		<polygon id="app-loader-poly-fg-left" filter="url(#app-loader-filter-left)" fill="#1D4E67" points="198.256,262.806 243.75,224.252 224.441,207.904" opacity="1" transform="translate(243.75, 224.2519989013672) scale(1.03) translate(-243.75, -224.2519989013672)"></polygon>
+		<polygon id="app-loader-poly-fg-right" filter="url(#app-loader-filter-right)" fill="#1D4E67" points="289.695,262.795 263.607,208.208 244.563,224.276" opacity="1" transform="translate(244.56300354003906, 224.2760009765625) scale(1.03) translate(-244.56300354003906, -224.2760009765625)"></polygon>
+
+		<linearGradient id="app-loader-gradient-top" gradientUnits="userSpaceOnUse" x1="244.0238" y1="170.75" x2="244.0238" y2="219.5641">
+			<stop offset="0" style="stop-color:#5DB4DF"></stop>
+			<stop offset="1" style="stop-color:#2A7AA0"></stop>
+		</linearGradient>
+
+		<filter id="app-loader-filter-top">
+			<feGaussianBlur id="app-loader-blur-top" in="SourceGraphic" stdDeviation="0" color-interpolation-filters="sRGB"></feGaussianBlur>
+		</filter>
+		<filter id="app-loader-filter-left">
+			<feGaussianBlur id="app-loader-blur-left" in="SourceGraphic" stdDeviation="0" color-interpolation-filters="sRGB"></feGaussianBlur>
+		</filter>
+		<filter id="app-loader-filter-right">
+			<feGaussianBlur id="app-loader-blur-right" in="SourceGraphic" stdDeviation="0" color-interpolation-filters="sRGB"></feGaussianBlur>
+		</filter>
+	</g>
+	<g id="app-loader-lines">
+		<path id="app-loader-line-thin" fill="none" stroke="#0E677D" stroke-width="1" stroke-miterlimit="10" d="M211.837,252.431 250.621,252.431 250.621,262.698 260.887,252.431 276.287,252.431 243.919,185.984 211.836,252.431z" stroke-dasharray="226.66940307617188" stroke-dashoffset="453.33880615234375"></path>
+		<path id="app-loader-line-thick" fill="none" stroke="#35D4FB" stroke-width="2.3" stroke-miterlimit="10" d="M211.837,252.431 250.621,252.431 250.621,262.698 260.887,252.431 276.287,252.431 243.919,185.984 211.836,252.431z" stroke-dasharray="226.66940307617188" stroke-dashoffset="453.33880615234375"></path>
+	</g>
+</svg>

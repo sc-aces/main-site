@@ -12,11 +12,13 @@ a {
   text-decoration: none;
   border-bottom: 2px solid #e7a53c;
   transition: all 0.2s;
-  padding-bottom: 3px;
+  padding-bottom: 1px;
 }
 
 a:hover {
   padding-bottom: 0;
+
+  border-bottom-color: #2c3e50;
 }
 
 .disableDecoration ~ a,
@@ -29,10 +31,54 @@ button ~ a {
 body {
   font-family: 'Roboto', Times, sans-serif;
   color: #555;
-  background-color: #fff;
+  background-color: #ececec;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#___gatsby,
+#___gatsby > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-p {
+p,
+li,
+a,
+span {
   line-height: 1.7;
-  font-size: 1.1em;
+  font-size: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.table-responsive {
+  overflow-x: scroll;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+table thead th {
+  background: #2c3e50;
+  color: white;
+  padding: 0.5em;
+}
+table th,
+table td {
+  padding: 0.5em;
+  border: 1px solid gainsboro;
 }

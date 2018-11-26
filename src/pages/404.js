@@ -1,10 +1,14 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Section from '../components/Section'
 
 const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <Layout pageName="Not Found">
+    <Section disableVertPadding center>
+      <h1>NOT FOUND</h1>
+      <hr />
+      <h5>You just hit a route that doesn't exist... the sadness.</h5>
+    </Section>
   </Layout>
 )
 

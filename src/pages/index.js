@@ -3,7 +3,7 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 // import img from '../assets/img/Esperia_Prowler_SHOT_01b.jpg'
-import Home from '../components/Home'
+import Home from '../pages-src/Home'
 
 const IndexPage = () => (
   <Layout disableGutters>

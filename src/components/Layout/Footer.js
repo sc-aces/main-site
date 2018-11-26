@@ -11,7 +11,6 @@ const styles = theme => ({
     fontFamily: theme.fonts.body,
     justifyContent: 'center',
     padding: '15px 0',
-    marginTop: '1.5rem',
   },
   inner: {
     alignItems: 'center',

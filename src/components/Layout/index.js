@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'react-jss'
-import JssProvider from 'react-jss/lib/JssProvider'
+// import JssProvider from 'react-jss/lib/JssProvider'
 import theme from '../../assets/theme'
 
 import Header from './Header'
@@ -23,7 +23,7 @@ import Footer from './Footer'
 //   }
 // }
 
-const Layout = ({ children, disableGutters }) => (
+const Layout = ({ children, disableGutters, pageName }) => (
   <ThemeProvider theme={theme}>
     <StaticQuery
       query={graphql`
@@ -38,10 +38,12 @@ const Layout = ({ children, disableGutters }) => (
       render={data => (
         <>
           <Helmet
-            title={data.site.siteMetadata.title}
+            title={
+              pageName ? `${pageName} | ACES` : data.site.siteMetadata.title
+            }
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'description', content: data.site.siteMetadata.title },
+              { name: 'keywords', content: 'ACES, star citizen, organization' },
             ]}
           >
             <html lang="en" />
@@ -51,7 +53,7 @@ const Layout = ({ children, disableGutters }) => (
             />
           </Helmet>
           <Header disableGutters={disableGutters} />
-          <div>{children}</div>
+          <div style={{ flex: 1 }}>{children}</div>
           <Footer />
         </>
       )}

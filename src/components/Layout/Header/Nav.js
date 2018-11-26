@@ -22,9 +22,8 @@ const styles = theme => ({
       color: theme.palette.midnight.contrast,
       marginRight: 7,
       textDecoration: 'none',
-      borderBottom: '5px solid transparent',
+      borderBottom: 'none',
       '&:hover': {
-        borderColor: 'green',
         paddingBottom: '14px',
         '& span': {
           background: theme.palette.midnight.color,
@@ -43,8 +42,8 @@ const styles = theme => ({
 const Nav = ({ classes }) => (
   <div className={classes.root}>
     <div className={classNames(classes.inner, classes.link)}>
-      <Link to="#">
-        <span>
+      <Link to="/">
+        <span aria-label="home">
           <FontAwesomeIcon icon={faHome} />
         </span>
       </Link>
@@ -54,10 +53,10 @@ const Nav = ({ classes }) => (
       <Link to="#">
         <span>Comms</span>
       </Link>
-      <Link to="#">
+      <Link to="/gov">
         <span>Gov</span>
       </Link>
-      <Link to="#">
+      <Link to="/about">
         <span>About</span>
       </Link>
     </div>

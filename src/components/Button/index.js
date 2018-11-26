@@ -3,10 +3,8 @@ import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import classNames from 'classnames'
 import { Link } from 'gatsby'
-import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons'
-import { Z_BLOCK } from 'zlib'
 
-const buttonVariants = ['primary', 'secondary', null]
+const buttonVariants = ['primary', 'secondary', 'dark', 'default', null]
 
 const styles = theme => ({
   button: {
@@ -25,9 +23,10 @@ const styles = theme => ({
       backgroundPosition: 0,
     },
     textTransform: 'uppercase',
+    margin: '8px 16px',
   },
   primary: {
-    backgroundPosition: '99%',
+    backgroundPosition: '100%',
     backgroundSize: '205% 100%',
     color: theme.palette.primary.contrast,
     background: `linear-gradient(
@@ -41,8 +40,38 @@ const styles = theme => ({
       color: theme.palette.secondary.contrast,
     },
   },
+  secondary: {
+    backgroundPosition: '100%',
+    backgroundSize: '205% 100%',
+    color: theme.palette.secondary.contrast,
+    background: `linear-gradient(
+      90deg,
+      ${theme.palette.primary.color} 0,
+      ${theme.palette.primary.color} 50%,
+      ${theme.palette.secondary.color} 51%,
+      ${theme.palette.secondary.color}
+      )`,
+    '&:hover': {
+      color: theme.palette.primary.contrast,
+    },
+  },
+  dark: {
+    backgroundPosition: '100%',
+    backgroundSize: '205% 100%',
+    color: theme.palette.midnight.contrast,
+    background: `linear-gradient(
+      90deg,
+      ${theme.palette.primary.color} 0,
+      ${theme.palette.primary.color} 50%,
+      ${theme.palette.midnight.color} 51%,
+      ${theme.palette.midnight.color}
+      )`,
+    '&:hover': {
+      color: theme.palette.primary.contrast,
+    },
+  },
   default: {
-    backgroundPosition: '99%',
+    backgroundPosition: '100%',
     backgroundSize: '205% 100%',
     color: theme.palette.gray.contrast,
     background: `linear-gradient(
@@ -63,11 +92,11 @@ const styles = theme => ({
 })
 
 const Button = props => {
-  const { children, classes } = props
+  const { children, classes, className } = props
   const variant = props.variant ? props.variant : 'default'
   return (
     <button
-      className={classNames(classes[variant], classes.button)}
+      className={classNames(classes[variant], classes.button, className)}
       type="button"
     >
       {children}
@@ -82,7 +111,7 @@ Button.propTypes = {
 }
 
 const ButtonContainer = props => {
-  const { children, classes, href, linkProps, variant } = props
+  const { children, classes, href, linkProps } = props
 
   const button = <Button {...props}>{children}</Button>
 
