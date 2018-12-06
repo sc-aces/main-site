@@ -42,7 +42,7 @@ const styles = theme => ({
 const ConsitutionPage = ({ classes }) => (
   <>
     <Section disableVertPadding>
-      <h1 className="entry-title">Constitution</h1>
+      <h1>Constitution</h1>
       <hr />
       <p>
         The Association of Capitalists, Explorers and Soldiers (ACES) is a

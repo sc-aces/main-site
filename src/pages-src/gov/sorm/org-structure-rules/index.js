@@ -60,19 +60,19 @@ const styles = theme => ({
   pageNav: {
     marginTop: '1em',
     position: 'sticky',
-    top: 0,
+    top: '1em',
   },
 })
 
 const OrgStructRulesPage = ({ classes }) => (
   <>
     <Section disableVertPadding>
-      <h1 className="entry-title">Organization Structure Rules</h1>
+      <h1>Organization Structure Rules</h1>
       <hr />
     </Section>
     <Section disableVertPadding>
-      <div className={classes.row}>
-        <div className={classes.col9}>
+      <div className="row">
+        <div className="col9">
           <Section id="general" disableVertPadding>
             <div className={classes.articleTitle}>
               <h2>General</h2>
@@ -837,7 +837,7 @@ const OrgStructRulesPage = ({ classes }) => (
             </div>
           </Section>
         </div>
-        <div className={classes.col3}>
+        <div className="col3">
           <nav className={classes.pageNav}>
             <Button
               className={classes.navButton}
@@ -880,6 +880,9 @@ const OrgStructRulesPage = ({ classes }) => (
               href="#subsidiary-orgs"
             >
               Subsidiary Organizations
+            </Button>
+            <Button className={classes.navButton} href="/gov/sorm">
+              Back to SORM
             </Button>
           </nav>
         </div>

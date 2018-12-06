@@ -12,7 +12,6 @@ const styles = theme => ({
     borderRadius: 0,
     border: 0,
     overflow: 'visible',
-    transition: 'outline-width .3s, outline-offset .3s, background-color .3s',
     '-webkit-appearance': 'none',
     cursor: 'pointer',
     outline: '4px solid hsla(0,0%,100%,0)',
@@ -105,7 +104,7 @@ const Button = props => {
 }
 
 Button.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
   classes: PropTypes.object.isRequired,
   variant: PropTypes.oneOf(buttonVariants),
 }
@@ -133,7 +132,7 @@ const ButtonContainer = props => {
 }
 
 ButtonContainer.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
   classes: PropTypes.object.isRequired,
   href: PropTypes.string,
   variant: PropTypes.oneOf(buttonVariants),

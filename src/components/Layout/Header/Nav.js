@@ -47,14 +47,14 @@ const Nav = ({ classes }) => (
           <FontAwesomeIcon icon={faHome} />
         </span>
       </Link>
-      <Link to="#">
-        <span>Community</span>
-      </Link>
-      <Link to="#">
-        <span>Comms</span>
-      </Link>
       <Link to="/gov">
         <span>Gov</span>
+      </Link>
+      <a href="https://robertsspaceindustries.com/spectrum/community/ACES">
+        <span>Community</span>
+      </a>
+      <Link to="/faqs">
+        <span>FAQs</span>
       </Link>
       <Link to="/about">
         <span>About</span>

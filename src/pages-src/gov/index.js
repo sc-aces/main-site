@@ -1,12 +1,12 @@
+import { faUserTie } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classNames from 'classnames'
 import React from 'react'
 import injectSheet from 'react-jss'
-import classNames from 'classnames'
-import Section from '../../components/Section'
-import Button from '../../components/Button'
-import govImg from '../../assets/img/gov.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserTie } from '@fortawesome/free-solid-svg-icons'
 import avatarMk from '../../assets/img/avatar-mk.jpg'
+import govImg from '../../assets/img/gov.jpg'
+import Button from '../../components/Button'
+import Section from '../../components/Section'
 
 const styles = theme => ({
   section: {
@@ -17,11 +17,6 @@ const styles = theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-  },
-  avatar: {
-    height: 161,
-    width: 161,
-    '& > img': { borderRadius: 100 },
   },
   faIcon: {
     fontSize: '5em',
@@ -48,35 +43,47 @@ const styles = theme => ({
     background: theme.palette.soldier.color,
     color: theme.palette.soldier.contrast,
   },
-  col4: {
-    width: '33%',
-    padding: '0 16px',
-    '@media (max-width: 767px)': {
-      width: '100%',
-    },
+  avatar: {
+    height: 161,
+    width: 161,
+    '& > img': { borderRadius: 100 },
+    background: 'none',
   },
-  col6: {
-    width: '50%',
-    padding: '0 16px',
-    '@media (max-width: 767px)': {
-      width: '100%',
-    },
-  },
-  row: {
+  centerBlock: {
     display: 'flex',
-    width: '100%',
-    margin: '0 -16px',
-    '@media (max-width: 767px)': {
-      display: 'block',
+    justifyContent: 'center',
+  },
+  skewButton: {
+    transform: 'skew(15deg,0)',
+    marginLeft: 0,
+    marginRight: 0,
+    '& > div': {
+      transform: 'skew(-15deg,0)',
     },
   },
 })
 
 const GovPage = ({ classes }) => (
   <>
-    <img src={govImg} />
+    <img src={govImg} alt="" />
     <Section disableVertPadding>
       <h1 className="text-center">Government</h1>
+      <div className={classes.centerBlock}>
+        <Button
+          className={classes.skewButton}
+          href="/gov/constitution"
+          variant="primary"
+        >
+          <div>Constitution</div>
+        </Button>
+        <Button
+          className={classes.skewButton}
+          href="/gov/sorm"
+          variant="primary"
+        >
+          <div>SORM</div>
+        </Button>
+      </div>
     </Section>
     <Section inset bg="triangles">
       <h2>Executive Council</h2>
@@ -87,22 +94,22 @@ const GovPage = ({ classes }) => (
         universe. Organizes cooperation between the Society and other
         organizations.
       </p>
-      <div className={classes.row}>
-        <div className={classNames(classes.userContainer, classes.col4)}>
+      <div className="row">
+        <div className={classNames(classes.userContainer, 'col4')}>
           <div className={classNames(classes.userExec, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>
           <h3>Councillor Name</h3>
           <Button href="#">Contact</Button>
         </div>
-        <div className={classNames(classes.userContainer, classes.col4)}>
+        <div className={classNames(classes.userContainer, 'col4')}>
           <div className={classNames(classes.userExec, classes.avatar)}>
             <img src={avatarMk} alt="MobiusKiller Profile" />
           </div>
           <h3>MobiusKiller</h3>
           <Button href="#">Contact</Button>
         </div>
-        <div className={classNames(classes.userContainer, classes.col4)}>
+        <div className={classNames(classes.userContainer, 'col4')}>
           <div className={classNames(classes.userExec, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>
@@ -120,15 +127,15 @@ const GovPage = ({ classes }) => (
         responsible for the mining, manufacturing, production, trading posts and
         stores of the Society.
       </p>
-      <div className={classes.row}>
-        <div className={classNames(classes.userContainer, classes.col6)}>
+      <div className="row">
+        <div className={classNames(classes.userContainer, 'col6')}>
           <div className={classNames(classes.userCap, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>
           <h3>Councillor Name</h3>
           <Button href="#">Contact</Button>
         </div>
-        <div className={classNames(classes.userContainer, classes.col6)}>
+        <div className={classNames(classes.userContainer, 'col6')}>
           <div className={classNames(classes.userCap, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>
@@ -146,15 +153,15 @@ const GovPage = ({ classes }) => (
         new systems to access, but also to discover new opportunities. Manages
         scouting and bounty-hunting operations.
       </p>
-      <div className={classes.row}>
-        <div className={classNames(classes.userContainer, classes.col6)}>
+      <div className="row">
+        <div className={classNames(classes.userContainer, 'col6')}>
           <div className={classNames(classes.userExpl, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>
           <h3>Councillor Name</h3>
           <Button href="#">Contact</Button>
         </div>
-        <div className={classNames(classes.userContainer, classes.col6)}>
+        <div className={classNames(classes.userContainer, 'col6')}>
           <div className={classNames(classes.userExpl, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>
@@ -176,15 +183,15 @@ const GovPage = ({ classes }) => (
         Society’s security or attempt to bar the Society’s access to trade
         routes.
       </p>
-      <div className={classes.row}>
-        <div className={classNames(classes.userContainer, classes.col6)}>
+      <div className="row">
+        <div className={classNames(classes.userContainer, 'col6')}>
           <div className={classNames(classes.userSold, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>
           <h3>Councillor Name</h3>
           <Button href="#">Contact</Button>
         </div>
-        <div className={classNames(classes.userContainer, classes.col6)}>
+        <div className={classNames(classes.userContainer, 'col6')}>
           <div className={classNames(classes.userSold, classes.faIcon)}>
             <FontAwesomeIcon icon={faUserTie} />
           </div>

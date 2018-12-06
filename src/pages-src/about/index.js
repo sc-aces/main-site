@@ -1,12 +1,10 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import classNames from 'classnames'
-import Section from '../../components/Section'
+import fleetImg from '../../assets/img/fleet.jpg'
 import govImg from '../../assets/img/gov.jpg'
-
 // following images from https://www.flickr.com/photos/hasgaha
 import squadImg from '../../assets/img/squad.jpg'
-import fleetImg from '../../assets/img/fleet.jpg'
+import Section from '../../components/Section'
 
 const styles = theme => ({
   flex: {
@@ -50,40 +48,18 @@ const styles = theme => ({
       borderBottom: `2px solid ${theme.palette.explorer.contrast}`,
     },
   },
-  col4: {
-    width: '33%',
-    padding: '0 16px',
-    '@media (max-width: 767px)': {
-      width: '100%',
-    },
-  },
-  col6: {
-    width: '50%',
-    padding: '0 16px',
-    '@media (max-width: 767px)': {
-      width: '100%',
-    },
-  },
-  row: {
-    display: 'flex',
-    width: '100%',
-    margin: '0 -16px',
-    '@media (max-width: 767px)': {
-      display: 'block',
-    },
-  },
 })
 
 const AboutPage = ({ classes }) => (
   <>
-    <img src={govImg} />
+    <img src={govImg} alt="" />
     <Section disableVertPadding>
       <h1 className="text-center">About</h1>
     </Section>
     <Section className={classes.aboutRoot}>
       <h2 className="text-center">THE HOME OF DEMOCRACY AND FREEDOM</h2>
-      <div className={classes.row}>
-        <div className={classNames(classes.col6)}>
+      <div className="row">
+        <div className="col6">
           <h3 className={classes.about}>ACES</h3>
           <p>
             The Association of Capitalists, Explorers, and Soldiers, is a
@@ -111,10 +87,8 @@ const AboutPage = ({ classes }) => (
             can enlist yourself intoone of these squadrons, or make your own.
           </p>
         </div>
-        <div className={classNames(classes.col6)}>
-          <h3 className={classNames('tex-center', classes.about)}>
-            LIBERTAS AD INFINITAS
-          </h3>
+        <div className="col6">
+          <h3 className={classes.about}>LIBERTAS AD INFINITAS</h3>
           <p>
             We pledge our honor and commitment to the United Empire of Earth. We
             will defend our allies and mankind giving pride to humanity and
